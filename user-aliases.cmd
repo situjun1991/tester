@@ -5,9 +5,6 @@
 ;= goto:eof
 ;= Add aliases below here
 e.=explorer .
-gl=git log --oneline --all --graph --decorate  $*
-logall=git --no-pager log
-gla=git --no-pager log --oneline --all --graph --decorate  $*
 ls=ls --all --show-control-chars -F --color $* 
 pwd=cd
 clear=cls
@@ -15,15 +12,21 @@ history=cat "%CMDER_ROOT%\config\.history"
 unalias=alias /d $1
 vi=vim $*
 cmderr=cd /d "%CMDER_ROOT%"
+
 npp=notepad++.exe $*
-d:=d: && cd ../../../
 devices=adb devices -l
-desktop=c: && cd Desktop
-gc=git checkout $*
+
+gco=git checkout $*
 gs=git status
-qujieqian=d: && cd ../../../ && cd QULab && cd Android
 gb=git branch -a
-github=d: && cd ../../../ && cd NoLaber
-laijieqian=d: && cd ../../../ && cd SSLab && cd Android
 gd=git branch -D $*
-ggl=git config --global --list
+gca=git config --global --list
+gl=git log --oneline --all --graph --decorate  $*
+logall=git --no-pager log
+gla=git --no-pager log --oneline --all --graph --decorate  $*
+
+laijieqian=d: && cd ../../../ && cd SSLab && cd Android
+qujieqian=d: && cd ../../../ && cd QULab && cd Android
+github=d: && cd ../../../ && cd NoLaber
+d:=d: && cd ../../../
+desktop=c: && cd Desktop
